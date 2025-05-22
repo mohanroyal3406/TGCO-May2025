@@ -1,0 +1,34 @@
+Team Name: Team 12 (Python)
+Team Members: Mohan Tipiri, Vinayak Kaniyarakkal 
+
+Approach Summary:
+We simulate a robot navigating a 2D grid bounded between -9999 and +9999. The robot moves only to “safe” squares, where the digit-sum of the product of the coordinates is less than 19.
+
+Algorithm:
+
+Implemented BFS for both:
+
+Exploring all reachable safe squares from (0, 0)
+
+Finding the shortest safe path between two points
+
+Safety Logic:
+
+is_safe(x, y) checks grid bounds and computes the digit-sum of |x * y|, ensuring it is less than 19.
+
+Optimizations:
+
+Python set for constant-time membership checks ensures each cell is visited only once.
+
+Coordinates stored as tuples (x, y) for fast lookups in the visited set.
+
+Extras:
+
+Realistic grid simulation with strict boundary enforcement.
+
+Fully modular code with an app.py containing:
+
+class RobotGrid:
+    ...  # BFS implementations and safety checks
+
+Unit tests in test.py using Python’s unittest framework ensure correctness of is_safe, total_safe_squares, and shortest_safe_journey.
